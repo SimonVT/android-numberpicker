@@ -1,0 +1,119 @@
+<resources>
+
+    <style name="MyTheme">
+        <!-- NumberPicker attributes and styles-->
+        <item name="numberPickerUpButtonStyle">@style/Widget.Holo.Light.ImageButton.NumberPickerUpButton</item>
+        <item name="numberPickerDownButtonStyle">@style/Widget.Holo.Light.ImageButton.NumberPickerDownButton</item>
+        <item name="numberPickerInputTextStyle">@style/Widget.Holo.Light.EditText.NumberPickerInputText</item>
+        <item name="numberPickerStyle">@style/Widget.Holo.Light.NumberPicker</item>
+    </style>
+
+    <attr name="numberPickerStyle" format="reference" />
+    <attr name="numberPickerUpButtonStyle" format="reference" />
+    <attr name="numberPickerDownButtonStyle" format="reference" />
+    <attr name="numberPickerInputTextStyle" format="reference" />
+
+    <declare-styleable name="NumberPicker">
+        <!-- @hide Color for the solid color background if such for optimized rendering. -->
+        <attr name="solidColor" format="color|reference" />
+        <!-- @hide Whether the number picker supports fligning. -->
+        <attr name="flingable" format="boolean" />
+        <!-- @hide The divider for making the selection area. -->
+        <attr name="selectionDivider" format="reference" />
+        <!-- @hide The height of the selection divider. -->
+        <attr name="selectionDividerHeight" format="dimension" />
+        <!-- @hide The min height of the NumberPicker. -->
+        <attr name="minHeight" format="dimension" />
+        <!-- @hide The max height of the NumberPicker. -->
+        <attr name="maxHeight" format="dimension" />
+        <!-- @hide The min width of the NumberPicker. -->
+        <attr name="minWidth" format="dimension" />
+        <!-- @hide The max width of the NumberPicker. -->
+        <attr name="maxWidth" format="dimension" />
+    </declare-styleable>
+
+    <style name="Widget">
+        <item name="android:textAppearance">?android:attr/textAppearance</item>
+    </style>
+
+    <style name="Widget.NumberPicker">
+        <item name="android:orientation">vertical</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">50dip</item>
+        <item name="flingable">false</item>
+    </style>
+
+    <style name="Widget.Holo.NumberPicker" parent="Widget.NumberPicker">
+        <item name="solidColor">@android:color/transparent</item>
+        <item name="flingable">true</item>
+        <item name="selectionDivider">@drawable/numberpicker_selection_divider</item>
+        <item name="selectionDividerHeight">2dip</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:maxHeight">200dip</item>
+        <item name="minWidth">48dip</item>
+        <item name="maxHeight">200dip</item>
+    </style>
+
+    <style name="Widget.Holo.Light.NumberPicker" parent="Widget.Holo.NumberPicker">
+    </style>
+
+    <style name="Widget.Holo.Light.EditText.NumberPickerInputText" parent="Widget.Holo.EditText.NumberPickerInputText">
+    </style>
+
+    <style name="Widget.Holo.Light.ImageButton.NumberPickerUpButton" parent="Widget.Holo.ImageButton.NumberPickerUpButton">
+        <item name="android:src">@drawable/numberpicker_up_btn_holo_light</item>
+    </style>
+
+    <style name="Widget.Holo.Light.ImageButton.NumberPickerDownButton" parent="Widget.Holo.ImageButton.NumberPickerDownButton">
+        <item name="android:src">@drawable/numberpicker_down_btn_holo_light</item>
+    </style>
+
+    <style name="Widget.Holo.EditText.NumberPickerInputText">
+        <item name="android:paddingTop">13sp</item>
+        <item name="android:paddingBottom">13sp</item>
+        <item name="android:paddingLeft">2sp</item>
+        <item name="android:paddingRight">2sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="Widget.Holo.EditText" parent="Widget.EditText">
+    </style>
+
+    <style name="Widget.EditText">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/edit_text_holo_light</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Widget.Holo.ImageButton.NumberPickerDownButton">
+        <item name="android:background">@null</item>
+        <!--item name="android:src">@drawable/numberpicker_down_btn_holo_dark</item-->
+        <item name="android:paddingTop">22dip</item>
+        <item name="android:paddingBottom">16dip</item>
+    </style>
+
+    <style name="Widget.Holo.ImageButton.NumberPickerUpButton">
+        <item name="android:background">@null</item>
+        <!--item name="android:src">@drawable/numberpicker_up_btn_holo_dark</item-->
+        <item name="android:paddingTop">16dip</item>
+        <item name="android:paddingBottom">22dip</item>
+    </style>
+
+    <style name="Widget.Holo.ImageButton" parent="Widget.ImageButton">
+        <!--item name="android:background">@android:drawable/btn_default_holo_dark</item-->
+    </style>
+
+    <style name="Widget.ImageButton">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@android:drawable/btn_default</item>
+    </style>
+</resources>
