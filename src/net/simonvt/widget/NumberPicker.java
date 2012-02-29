@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-package net.simonvt.test;
-
-import net.simonvt.test.R;
+package net.simonvt.widget;
 
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;
@@ -538,7 +536,8 @@ public class NumberPicker extends LinearLayout {
      * @param defStyle The default style to apply to this view.
      */
     public NumberPicker(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
+        super(context, attrs);
+       // super(context, attrs, defStyle);
 
         // process style attributes
         TypedArray attributesArray = context.obtainStyledAttributes(attrs,
@@ -1029,24 +1028,24 @@ public class NumberPicker extends LinearLayout {
     /**
      * Set the current value for the number picker.
      * <p>
-     * If the argument is less than the {@link net.simonvt.test.NumberPicker#getMinValue()} and
-     * {@link net.simonvt.test.NumberPicker#getWrapSelectorWheel()} is <code>false</code> the
-     * current value is set to the {@link net.simonvt.test.NumberPicker#getMinValue()} value.
+     * If the argument is less than the {@link net.simonvt.widget.NumberPicker#getMinValue()} and
+     * {@link net.simonvt.widget.NumberPicker#getWrapSelectorWheel()} is <code>false</code> the
+     * current value is set to the {@link net.simonvt.widget.NumberPicker#getMinValue()} value.
      * </p>
      * <p>
-     * If the argument is less than the {@link net.simonvt.test.NumberPicker#getMinValue()} and
-     * {@link net.simonvt.test.NumberPicker#getWrapSelectorWheel()} is <code>true</code> the
-     * current value is set to the {@link net.simonvt.test.NumberPicker#getMaxValue()} value.
+     * If the argument is less than the {@link net.simonvt.widget.NumberPicker#getMinValue()} and
+     * {@link net.simonvt.widget.NumberPicker#getWrapSelectorWheel()} is <code>true</code> the
+     * current value is set to the {@link net.simonvt.widget.NumberPicker#getMaxValue()} value.
      * </p>
      * <p>
-     * If the argument is less than the {@link net.simonvt.test.NumberPicker#getMaxValue()} and
-     * {@link net.simonvt.test.NumberPicker#getWrapSelectorWheel()} is <code>false</code> the
-     * current value is set to the {@link net.simonvt.test.NumberPicker#getMaxValue()} value.
+     * If the argument is less than the {@link net.simonvt.widget.NumberPicker#getMaxValue()} and
+     * {@link net.simonvt.widget.NumberPicker#getWrapSelectorWheel()} is <code>false</code> the
+     * current value is set to the {@link net.simonvt.widget.NumberPicker#getMaxValue()} value.
      * </p>
      * <p>
-     * If the argument is less than the {@link net.simonvt.test.NumberPicker#getMaxValue()} and
-     * {@link net.simonvt.test.NumberPicker#getWrapSelectorWheel()} is <code>true</code> the
-     * current value is set to the {@link net.simonvt.test.NumberPicker#getMinValue()} value.
+     * If the argument is less than the {@link net.simonvt.widget.NumberPicker#getMaxValue()} and
+     * {@link net.simonvt.widget.NumberPicker#getWrapSelectorWheel()} is <code>true</code> the
+     * current value is set to the {@link net.simonvt.widget.NumberPicker#getMinValue()} value.
      * </p>
      *
      * @param value The current value.
@@ -1128,8 +1127,8 @@ public class NumberPicker extends LinearLayout {
 
     /**
      * Sets whether the selector wheel shown during flinging/scrolling should
-     * wrap around the {@link net.simonvt.test.NumberPicker#getMinValue()} and
-     * {@link net.simonvt.test.NumberPicker#getMaxValue()} values.
+     * wrap around the {@link net.simonvt.widget.NumberPicker#getMinValue()} and
+     * {@link net.simonvt.widget.NumberPicker#getMaxValue()} values.
      * <p>
      * By default if the range (max - min) is more than five (the number of
      * items shown on the selector wheel) the selector wheel wrapping is
@@ -1878,7 +1877,7 @@ public class NumberPicker extends LinearLayout {
     }
 
     /**
-     * Posts an {@link net.simonvt.test.NumberPicker.SetSelectionCommand} from the given <code>selectionStart
+     * Posts an {@link net.simonvt.widget.NumberPicker.SetSelectionCommand} from the given <code>selectionStart
      * </code> to
      * <code>selectionEnd</code>.
      */
@@ -1894,7 +1893,7 @@ public class NumberPicker extends LinearLayout {
     }
 
     /**
-     * Posts an {@link net.simonvt.test.NumberPicker.AdjustScrollerCommand} within the given <code>
+     * Posts an {@link net.simonvt.widget.NumberPicker.AdjustScrollerCommand} within the given <code>
      * delayMillis</code>
      * .
      */
