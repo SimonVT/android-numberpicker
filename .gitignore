@@ -1,7 +1,18 @@
 /*
 
 !.gitignore
-!src/
-!res/
-!AndroidManifest.xml
 !README
+
+!library/
+library/*
+!library/src/
+!library/res/
+!library/AndroidManifest.xml
+!library/build.xml
+
+!samples/
+samples/*
+!samples/src/
+!samples/res/
+!samples/AndroidManifest.xml
+!samples/build.xml
