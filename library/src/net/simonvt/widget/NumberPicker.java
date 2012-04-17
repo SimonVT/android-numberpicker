@@ -1607,6 +1607,9 @@ public class NumberPicker extends LinearLayout {
             updateInputTextView();
             showInputControls(mShowInputControlsAnimimationDuration);
         }
+
+        // Needs an invalidate after scroll to support older platforms
+        invalidate();
     }
 
     /**
