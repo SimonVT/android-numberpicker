@@ -30,13 +30,17 @@
         <!-- @hide The height of the selection divider. -->
         <attr name="selectionDividerHeight" format="dimension" />
         <!-- @hide The min height of the NumberPicker. -->
-        <attr name="minHeight" format="dimension" />
+        <attr name="android:minHeight" />
         <!-- @hide The max height of the NumberPicker. -->
-        <attr name="maxHeight" format="dimension" />
+        <attr name="android:maxHeight" />
         <!-- @hide The min width of the NumberPicker. -->
-        <attr name="minWidth" format="dimension" />
+        <attr name="android:minWidth" />
         <!-- @hide The max width of the NumberPicker. -->
-        <attr name="maxWidth" format="dimension" />
+        <attr name="android:maxWidth" />
+
+        <!-- We need some extra attributes -->
+        <attr name="android:orientation" />
+        <attr name="android:fadingEdgeLength" />
     </declare-styleable>
 
     <style name="NPWidget">
@@ -57,8 +61,6 @@
         <item name="selectionDividerHeight">2dip</item>
         <item name="android:minWidth">48dip</item>
         <item name="android:maxHeight">200dip</item>
-        <item name="minWidth">48dip</item>
-        <item name="maxHeight">200dip</item>
     </style>
 
     <style name="NPWidget.Holo.Light.NumberPicker" parent="NPWidget.Holo.NumberPicker">

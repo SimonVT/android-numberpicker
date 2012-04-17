@@ -20,20 +20,19 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageButton android:id="@+id/increment"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?attr/numberPickerUpButtonStyle"
         android:contentDescription="@string/np_number_picker_increment_button" />
 
-    <view
-        class="net.simonvt.widget.NumberPicker$CustomEditText"
+    <view class="net.simonvt.widget.NumberPicker$CustomEditText"
         android:id="@+id/numberpicker_input"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?attr/numberPickerInputTextStyle" />
 
     <ImageButton android:id="@+id/decrement"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?attr/numberPickerDownButtonStyle"
         android:contentDescription="@string/np_number_picker_decrement_button" />

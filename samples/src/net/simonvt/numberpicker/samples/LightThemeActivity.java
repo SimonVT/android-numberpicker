@@ -21,11 +21,5 @@ public class LightThemeActivity extends Activity {
         np.setMinValue(0);
         np.setFocusable(true);
         np.setFocusableInTouchMode(true);
-
-        android.widget.NumberPicker npn = (android.widget.NumberPicker) findViewById(R.id.numberPickerNative);
-        npn.setMaxValue(20);
-        npn.setMinValue(0);
-        npn.setFocusable(true);
-        npn.setFocusableInTouchMode(true);
     }
 }

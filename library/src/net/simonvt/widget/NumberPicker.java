@@ -30,7 +30,6 @@ import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.Spanned;
@@ -53,7 +52,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import net.simonvt.widget.Scroller;
 import android.widget.TextView;
 
 /**
@@ -546,7 +544,7 @@ public class NumberPicker extends LinearLayout {
 
         // process style attributes
         TypedArray attributesArray = context.obtainStyledAttributes(attrs,
-                R.styleable.NumberPicker, defStyle, 0);
+                R.styleable.NumberPicker, R.attr.numberPickerStyle, 0);
         mSolidColor = attributesArray.getColor(R.styleable.NumberPicker_solidColor, 0);
         mFlingable = attributesArray.getBoolean(R.styleable.NumberPicker_flingable, true);
         mSelectionDivider = attributesArray.getDrawable(R.styleable.NumberPicker_selectionDivider);
@@ -555,24 +553,24 @@ public class NumberPicker extends LinearLayout {
                 getResources().getDisplayMetrics());
         mSelectionDividerHeight = attributesArray.getDimensionPixelSize(
                 R.styleable.NumberPicker_selectionDividerHeight, defSelectionDividerHeight);
-        mMinHeight = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_minHeight,
+        mMinHeight = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_android_minHeight,
                 SIZE_UNSPECIFIED);
-        mMaxHeight = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_maxHeight,
+        mMaxHeight = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_android_maxHeight,
                 SIZE_UNSPECIFIED);
         if (mMinHeight != SIZE_UNSPECIFIED && mMaxHeight != SIZE_UNSPECIFIED
                 && mMinHeight > mMaxHeight) {
             throw new IllegalArgumentException("minHeight > maxHeight");
         }
-        mMinWidth = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_minWidth,
+        mMinWidth = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_android_minWidth,
                 SIZE_UNSPECIFIED);
-        mMaxWidth = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_maxWidth,
+        mMaxWidth = attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_android_maxWidth,
                 SIZE_UNSPECIFIED);
         if (mMinWidth != SIZE_UNSPECIFIED && mMaxWidth != SIZE_UNSPECIFIED
                 && mMinWidth > mMaxWidth) {
             throw new IllegalArgumentException("minWidth > maxWidth");
         }
         mComputeMaxWidth = (mMaxWidth == Integer.MAX_VALUE);
-        attributesArray.recycle();
+        //attributesArray.recycle();
 
         mShowInputControlsAnimimationDuration = getResources().getInteger(
                 R.integer.np_config_longAnimTime);
@@ -714,6 +712,19 @@ public class NumberPicker extends LinearLayout {
                 hideInputControls();
             }
         }
+
+        // Native NumberPicker is vertical
+        int orientation = attributesArray.getInt(R.styleable.NumberPicker_android_orientation, -1);
+        if (orientation >= 0) {
+            setOrientation(orientation);
+        }
+        // Not picked up by parent since LinearLayout 3 param constructor isn't public.. damn them
+        setMinimumWidth(mMinWidth);
+
+        setFadingEdgeLength(attributesArray.getDimensionPixelSize(R.styleable.NumberPicker_android_fadingEdgeLength, 0));
+        setVerticalFadingEdgeEnabled(true);
+
+        attributesArray.recycle();
     }
 
     @Override
@@ -1428,7 +1439,7 @@ public class NumberPicker extends LinearLayout {
             int measureSpec) {
         if (minSize != SIZE_UNSPECIFIED) {
             final int desiredWidth = Math.max(minSize, measuredSize);
-            return resolveSizeAndState(desiredWidth, measureSpec, 0);
+            return resolveSize(desiredWidth, measureSpec);
         } else {
             return measuredSize;
         }
@@ -1779,7 +1790,8 @@ public class NumberPicker extends LinearLayout {
         }
         mInputText.setSelection(mInputText.getText().length());
 
-        if (mFlingable && ((AccessibilityManager) getContext().getSystemService(Context.ACCESSIBILITY_SERVICE)).isEnabled()) {
+        if (mFlingable && ((AccessibilityManager) getContext().getSystemService(
+                Context.ACCESSIBILITY_SERVICE)).isEnabled()) {
             String text = getContext().getString(R.string.np_number_picker_increment_scroll_mode,
                     mInputText.getText());
             mInputText.setContentDescription(text);
@@ -2002,32 +2014,6 @@ public class NumberPicker extends LinearLayout {
             changeCurrentByOne(mIncrement);
             postDelayed(this, mLongPressUpdateInterval);
         }
-    }
-
-    public static final int MEASURED_STATE_MASK = 0xff000000;
-
-    public static final int MEASURED_STATE_TOO_SMALL = 0x01000000;
-
-    public static int resolveSizeAndState(int size, int measureSpec, int childMeasuredState) {
-        int result = size;
-        int specMode = MeasureSpec.getMode(measureSpec);
-        int specSize =  MeasureSpec.getSize(measureSpec);
-        switch (specMode) {
-            case MeasureSpec.UNSPECIFIED:
-                result = size;
-                break;
-            case MeasureSpec.AT_MOST:
-                if (specSize < size) {
-                    result = specSize | MEASURED_STATE_TOO_SMALL;
-                } else {
-                    result = size;
-                }
-                break;
-            case MeasureSpec.EXACTLY:
-                result = specSize;
-                break;
-        }
-        return result | (childMeasuredState&MEASURED_STATE_MASK);
     }
 
     /**
