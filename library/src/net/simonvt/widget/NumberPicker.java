@@ -570,7 +570,7 @@ public class NumberPicker extends LinearLayout {
         attributesArray.recycle();
 
         mShowInputControlsAnimimationDuration = getResources().getInteger(
-                R.integer.config_longAnimTime);
+                R.integer.np_config_longAnimTime);
 
         // By default Linearlayout that we extend is not drawn. This is
         // its draw() method is not called but dispatchDraw() is called
@@ -1568,7 +1568,7 @@ public class NumberPicker extends LinearLayout {
         if (mFlingable && selectorWheelState == SELECTOR_WHEEL_STATE_LARGE
                 && ((AccessibilityManager) getContext().getSystemService(Context.ACCESSIBILITY_SERVICE)).isEnabled()) {
             ((AccessibilityManager) getContext().getSystemService(Context.ACCESSIBILITY_SERVICE)).interrupt();
-            String text = getContext().getString(R.string.number_picker_increment_scroll_action);
+            String text = getContext().getString(R.string.np_number_picker_increment_scroll_action);
             mInputText.setContentDescription(text);
             mInputText.sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_SELECTED);
             mInputText.setContentDescription(null);
@@ -1797,7 +1797,7 @@ public class NumberPicker extends LinearLayout {
 
         if (mFlingable && ((AccessibilityManager) getContext().getSystemService(
                 Context.ACCESSIBILITY_SERVICE)).isEnabled()) {
-            String text = getContext().getString(R.string.number_picker_increment_scroll_mode,
+            String text = getContext().getString(R.string.np_number_picker_increment_scroll_mode,
                     mInputText.getText());
             mInputText.setContentDescription(text);
         }

@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="SampleTheme" parent="android:Theme">
+        <item name="numberPickerUpButtonStyle">@style/NPWidget.Holo.ImageButton.NumberPickerUpButton</item>
+        <item name="numberPickerDownButtonStyle">@style/NPWidget.Holo.ImageButton.NumberPickerDownButton</item>
+        <item name="numberPickerInputTextStyle">@style/NPWidget.Holo.EditText.NumberPickerInputText</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.NumberPicker</item>
+    </style>
+
+    <style name="SampleTheme.Light" parent="android:Theme.Light">
+        <item name="numberPickerUpButtonStyle">@style/NPWidget.Holo.Light.ImageButton.NumberPickerUpButton</item>
+        <item name="numberPickerDownButtonStyle">@style/NPWidget.Holo.Light.ImageButton.NumberPickerDownButton</item>
+        <item name="numberPickerInputTextStyle">@style/NPWidget.Holo.Light.EditText.NumberPickerInputText</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.Light.NumberPicker</item>
+    </style>
+
+</resources>

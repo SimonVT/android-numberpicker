@@ -1,11 +1,18 @@
 <resources>
 
-    <style name="MyTheme">
+    <style name="NPSampleTheme">
+        <item name="numberPickerUpButtonStyle">@style/NPWidget.Holo.ImageButton.NumberPickerUpButton</item>
+        <item name="numberPickerDownButtonStyle">@style/NPWidget.Holo.ImageButton.NumberPickerDownButton</item>
+        <item name="numberPickerInputTextStyle">@style/NPWidget.Holo.EditText.NumberPickerInputText</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.NumberPicker</item>
+    </style>
+
+    <style name="NPSampleTheme.Light">
         <!-- NumberPicker attributes and styles-->
-        <item name="numberPickerUpButtonStyle">@style/Widget.Holo.Light.ImageButton.NumberPickerUpButton</item>
-        <item name="numberPickerDownButtonStyle">@style/Widget.Holo.Light.ImageButton.NumberPickerDownButton</item>
-        <item name="numberPickerInputTextStyle">@style/Widget.Holo.Light.EditText.NumberPickerInputText</item>
-        <item name="numberPickerStyle">@style/Widget.Holo.Light.NumberPicker</item>
+        <item name="numberPickerUpButtonStyle">@style/NPWidget.Holo.Light.ImageButton.NumberPickerUpButton</item>
+        <item name="numberPickerDownButtonStyle">@style/NPWidget.Holo.Light.ImageButton.NumberPickerDownButton</item>
+        <item name="numberPickerInputTextStyle">@style/NPWidget.Holo.Light.EditText.NumberPickerInputText</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.Light.NumberPicker</item>
     </style>
 
     <attr name="numberPickerStyle" format="reference" />
@@ -32,21 +39,21 @@
         <attr name="maxWidth" format="dimension" />
     </declare-styleable>
 
-    <style name="Widget">
+    <style name="NPWidget">
         <item name="android:textAppearance">?android:attr/textAppearance</item>
     </style>
 
-    <style name="Widget.NumberPicker">
+    <style name="NPWidget.NumberPicker">
         <item name="android:orientation">vertical</item>
         <item name="android:fadingEdge">vertical</item>
         <item name="android:fadingEdgeLength">50dip</item>
         <item name="flingable">false</item>
     </style>
 
-    <style name="Widget.Holo.NumberPicker" parent="Widget.NumberPicker">
+    <style name="NPWidget.Holo.NumberPicker" parent="NPWidget.NumberPicker">
         <item name="solidColor">@android:color/transparent</item>
         <item name="flingable">true</item>
-        <item name="selectionDivider">@drawable/numberpicker_selection_divider</item>
+        <item name="selectionDivider">@drawable/np_numberpicker_selection_divider</item>
         <item name="selectionDividerHeight">2dip</item>
         <item name="android:minWidth">48dip</item>
         <item name="android:maxHeight">200dip</item>
@@ -54,21 +61,21 @@
         <item name="maxHeight">200dip</item>
     </style>
 
-    <style name="Widget.Holo.Light.NumberPicker" parent="Widget.Holo.NumberPicker">
+    <style name="NPWidget.Holo.Light.NumberPicker" parent="NPWidget.Holo.NumberPicker">
     </style>
 
-    <style name="Widget.Holo.Light.EditText.NumberPickerInputText" parent="Widget.Holo.EditText.NumberPickerInputText">
+    <style name="NPWidget.Holo.Light.EditText.NumberPickerInputText" parent="NPWidget.Holo.EditText.NumberPickerInputText">
     </style>
 
-    <style name="Widget.Holo.Light.ImageButton.NumberPickerUpButton" parent="Widget.Holo.ImageButton.NumberPickerUpButton">
-        <item name="android:src">@drawable/numberpicker_up_btn_holo_light</item>
+    <style name="NPWidget.Holo.Light.ImageButton.NumberPickerUpButton" parent="NPWidget.Holo.ImageButton.NumberPickerUpButton">
+        <item name="android:src">@drawable/np_numberpicker_up_btn_holo_light</item>
     </style>
 
-    <style name="Widget.Holo.Light.ImageButton.NumberPickerDownButton" parent="Widget.Holo.ImageButton.NumberPickerDownButton">
-        <item name="android:src">@drawable/numberpicker_down_btn_holo_light</item>
+    <style name="NPWidget.Holo.Light.ImageButton.NumberPickerDownButton" parent="NPWidget.Holo.ImageButton.NumberPickerDownButton">
+        <item name="android:src">@drawable/np_numberpicker_down_btn_holo_light</item>
     </style>
 
-    <style name="Widget.Holo.EditText.NumberPickerInputText">
+    <style name="NPWidget.Holo.EditText.NumberPickerInputText">
         <item name="android:paddingTop">13sp</item>
         <item name="android:paddingBottom">13sp</item>
         <item name="android:paddingLeft">2sp</item>
@@ -79,38 +86,37 @@
         <item name="android:background">@null</item>
     </style>
 
-    <style name="Widget.Holo.EditText" parent="Widget.EditText">
+    <style name="NPWidget.Holo.EditText" parent="NPWidget.EditText">
     </style>
 
-    <style name="Widget.EditText">
+    <style name="NPWidget.EditText">
         <item name="android:focusable">true</item>
         <item name="android:focusableInTouchMode">true</item>
         <item name="android:clickable">true</item>
-        <item name="android:background">@drawable/edit_text_holo_light</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMediumInverse</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
         <item name="android:gravity">center_vertical</item>
     </style>
 
-    <style name="Widget.Holo.ImageButton.NumberPickerDownButton">
+    <style name="NPWidget.Holo.ImageButton.NumberPickerUpButton">
         <item name="android:background">@null</item>
-        <!--item name="android:src">@drawable/numberpicker_down_btn_holo_dark</item-->
-        <item name="android:paddingTop">22dip</item>
-        <item name="android:paddingBottom">16dip</item>
-    </style>
-
-    <style name="Widget.Holo.ImageButton.NumberPickerUpButton">
-        <item name="android:background">@null</item>
-        <!--item name="android:src">@drawable/numberpicker_up_btn_holo_dark</item-->
+        <item name="android:src">@drawable/np_numberpicker_up_btn_holo_dark</item>
         <item name="android:paddingTop">16dip</item>
         <item name="android:paddingBottom">22dip</item>
     </style>
 
-    <style name="Widget.Holo.ImageButton" parent="Widget.ImageButton">
+    <style name="NPWidget.Holo.ImageButton.NumberPickerDownButton">
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/np_numberpicker_down_btn_holo_dark</item>
+        <item name="android:paddingTop">22dip</item>
+        <item name="android:paddingBottom">16dip</item>
+    </style>
+
+    <style name="NPWidget.Holo.ImageButton" parent="NPWidget.ImageButton">
         <!--item name="android:background">@android:drawable/btn_default_holo_dark</item-->
     </style>
 
-    <style name="Widget.ImageButton">
+    <style name="NPWidget.ImageButton">
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
         <item name="android:scaleType">center</item>
