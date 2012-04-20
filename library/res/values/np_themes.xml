@@ -1,5 +1,6 @@
 <resources>
 
+    <!-- Copy these attributes to your own theme (choose either dark or light). DO NOT EXTEND THESE -->
     <style name="NPSampleTheme">
         <item name="numberPickerUpButtonStyle">@style/NPWidget.Holo.ImageButton.NumberPickerUpButton</item>
         <item name="numberPickerDownButtonStyle">@style/NPWidget.Holo.ImageButton.NumberPickerDownButton</item>
@@ -8,13 +9,13 @@
     </style>
 
     <style name="NPSampleTheme.Light">
-        <!-- NumberPicker attributes and styles-->
         <item name="numberPickerUpButtonStyle">@style/NPWidget.Holo.Light.ImageButton.NumberPickerUpButton</item>
         <item name="numberPickerDownButtonStyle">@style/NPWidget.Holo.Light.ImageButton.NumberPickerDownButton</item>
         <item name="numberPickerInputTextStyle">@style/NPWidget.Holo.Light.EditText.NumberPickerInputText</item>
         <item name="numberPickerStyle">@style/NPWidget.Holo.Light.NumberPicker</item>
     </style>
 
+    <!-- Don't touch this -->
     <attr name="numberPickerStyle" format="reference" />
     <attr name="numberPickerUpButtonStyle" format="reference" />
     <attr name="numberPickerDownButtonStyle" format="reference" />
