@@ -7,8 +7,10 @@
 library/*
 !library/src/
 !library/res/
+!library/libs/
 !library/AndroidManifest.xml
 !library/build.xml
+!library/project.properties
 
 !samples/
 samples/*
@@ -16,3 +18,4 @@ samples/*
 !samples/res/
 !samples/AndroidManifest.xml
 !samples/build.xml
+!samples/project.properties
