@@ -114,8 +114,7 @@ public class Scroller  {
      * be in effect for apps targeting Honeycomb or newer.
      */
     public Scroller(Context context, Interpolator interpolator) {
-        this(context, interpolator,
-                context.getApplicationInfo().targetSdkVersion >= Build.VERSION_CODES.HONEYCOMB);
+        this(context, interpolator, true);
     }
 
     /**

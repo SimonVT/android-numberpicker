@@ -19,19 +19,19 @@
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageButton android:id="@+id/increment"
+    <ImageButton android:id="@+id/np_increment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?attr/numberPickerUpButtonStyle"
         android:contentDescription="@string/np_number_picker_increment_button" />
 
     <view class="net.simonvt.widget.NumberPicker$CustomEditText"
-        android:id="@+id/numberpicker_input"
+        android:id="@+id/np_numberpicker_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?attr/numberPickerInputTextStyle" />
 
-    <ImageButton android:id="@+id/decrement"
+    <ImageButton android:id="@+id/np_decrement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="?attr/numberPickerDownButtonStyle"

@@ -595,7 +595,7 @@ public class NumberPicker extends LinearLayout {
                     inputMethodManager.hideSoftInputFromWindow(getWindowToken(), 0);
                 }
                 mInputText.clearFocus();
-                if (v.getId() == R.id.increment) {
+                if (v.getId() == R.id.np_increment) {
                     changeCurrentByOne(true);
                 } else {
                     changeCurrentByOne(false);
@@ -606,7 +606,7 @@ public class NumberPicker extends LinearLayout {
         OnLongClickListener onLongClickListener = new OnLongClickListener() {
             public boolean onLongClick(View v) {
                 mInputText.clearFocus();
-                if (v.getId() == R.id.increment) {
+                if (v.getId() == R.id.np_increment) {
                     postChangeCurrentByOneFromLongPress(true);
                 } else {
                     postChangeCurrentByOneFromLongPress(false);
@@ -616,17 +616,17 @@ public class NumberPicker extends LinearLayout {
         };
 
         // increment button
-        mIncrementButton = (ImageButton) findViewById(R.id.increment);
+        mIncrementButton = (ImageButton) findViewById(R.id.np_increment);
         mIncrementButton.setOnClickListener(onClickListener);
         mIncrementButton.setOnLongClickListener(onLongClickListener);
 
         // decrement button
-        mDecrementButton = (ImageButton) findViewById(R.id.decrement);
+        mDecrementButton = (ImageButton) findViewById(R.id.np_decrement);
         mDecrementButton.setOnClickListener(onClickListener);
         mDecrementButton.setOnLongClickListener(onLongClickListener);
 
         // input text
-        mInputText = (EditText) findViewById(R.id.numberpicker_input);
+        mInputText = (EditText) findViewById(R.id.np_numberpicker_input);
         mInputText.setOnFocusChangeListener(new OnFocusChangeListener() {
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus) {
