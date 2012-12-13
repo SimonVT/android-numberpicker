@@ -1792,12 +1792,19 @@ public class NumberPicker extends LinearLayout {
             mInputText.setText(mDisplayedValues[mValue - mMinValue]);
         }
         mInputText.setSelection(mInputText.getText().length());
+        
+        /*
+         *  To avoid UnsupportedOperationException in Graphical Layout Editor
+         */
+        if (!isInEditMode()) {
 
-        if (mFlingable && ((AccessibilityManager) getContext().getSystemService(
-                Context.ACCESSIBILITY_SERVICE)).isEnabled()) {
-            String text = getContext().getString(R.string.np_number_picker_increment_scroll_mode,
-                    mInputText.getText());
-            mInputText.setContentDescription(text);
+            if (mFlingable && ((AccessibilityManager) getContext().getSystemService(
+                    Context.ACCESSIBILITY_SERVICE)).isEnabled()) {
+                String text = getContext().getString(R.string.np_number_picker_increment_scroll_mode,
+                        mInputText.getText());
+                mInputText.setContentDescription(text);
+            }
+            
         }
     }
 
