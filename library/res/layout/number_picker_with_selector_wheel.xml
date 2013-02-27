@@ -19,7 +19,7 @@
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <view class="net.simonvt.widget.NumberPicker$CustomEditText"
+    <view class="net.simonvt.numberpicker.NumberPicker$CustomEditText"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="?android:attr/textColorPrimary"
         android:id="@+id/np__numberpicker_input"

@@ -1,6 +1,6 @@
 package net.simonvt.numberpicker.samples;
 
-import net.simonvt.widget.NumberPicker;
+import net.simonvt.numberpicker.NumberPicker;
 
 import android.app.Activity;
 import android.os.Bundle;

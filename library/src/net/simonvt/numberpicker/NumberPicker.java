@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.simonvt.widget;
+package net.simonvt.numberpicker;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -27,7 +27,6 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.view.ViewCompat;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.Spanned;
@@ -722,9 +721,11 @@ public class NumberPicker extends LinearLayout {
 
         updateInputTextView();
 
-        // If not explicitly specified this view is important for accessibility.
-        if (ViewCompat.getImportantForAccessibility(this) == ViewCompat.IMPORTANT_FOR_ACCESSIBILITY_AUTO) {
-            ViewCompat.setImportantForAccessibility(this, ViewCompat.IMPORTANT_FOR_ACCESSIBILITY_YES);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            // If not explicitly specified this view is important for accessibility.
+            if (getImportantForAccessibility() == IMPORTANT_FOR_ACCESSIBILITY_AUTO) {
+                setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_YES);
+            }
         }
     }
 

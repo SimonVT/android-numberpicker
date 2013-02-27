@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package net.simonvt.widget;
+package net.simonvt.numberpicker;
 
 import android.content.Context;
 import android.hardware.SensorManager;
-import android.os.Build;
 import android.util.FloatMath;
 import android.view.ViewConfiguration;
 import android.view.animation.AnimationUtils;

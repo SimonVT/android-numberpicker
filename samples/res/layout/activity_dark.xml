@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:gravity="center">
 
-    <net.simonvt.widget.NumberPicker
+    <net.simonvt.numberpicker.NumberPicker
         android:id="@+id/numberPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
