@@ -12,7 +12,7 @@
     <groupId>net.simonvt</groupId>
     <artifactId>android-numberpicker-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <name>Android NumberPicker (Parent)</name>
     <description>A backport of the Android 4.2 NumberPicker.</description>
@@ -28,7 +28,8 @@
         <url>http://github.com/SimonVT/android-numberpicker/</url>
         <connection>scm:git:git://github.com/SimonVT/android-numberpicker.git</connection>
         <developerConnection>scm:git:git@github.com:SimonVT/android-numberpicker.git</developerConnection>
-    </scm>
+      <tag>1.0.0</tag>
+  </scm>
 
     <licenses>
         <license>
