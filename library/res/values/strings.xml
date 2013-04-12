@@ -2,7 +2,7 @@
 <resources>
 
     <!-- The title of the number picker dialog. [CHAR LIMIT=NONE] -->
-    <string name="number_picker_dialog_title">Set time</string>
+    <string name="number_picker_dialog_title">Set number</string>
     <!-- Name of the button in the number picker to accept the number change -->
     <string name="number_done">Done</string>
 

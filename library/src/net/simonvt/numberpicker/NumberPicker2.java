@@ -57,8 +57,10 @@ public class NumberPicker2 extends FrameLayout {
         mNumberSpinner = (NumberPicker) findViewById(R.id.number);
         mNumberSpinner.setMinValue(0);
         mNumberSpinner.setMaxValue(59);
-        mNumberSpinner.setOnLongPressUpdateInterval(100);
-        mNumberSpinner.setFormatter(NumberPicker.getTwoDigitFormatter());
+        mNumberSpinner.setOnLongPressUpdateInterval(100);        
+        mNumberSpinner.setFocusable(true);
+        mNumberSpinner.setFocusableInTouchMode(true);
+        //mNumberSpinner.setFormatter(NumberPicker.getTwoDigitFormatter());
         
         mNumberSpinnerInput = (EditText) mNumberSpinner.findViewById(R.id.np__numberpicker_input);
         mNumberSpinnerInput.setImeOptions(EditorInfo.IME_ACTION_NEXT);
