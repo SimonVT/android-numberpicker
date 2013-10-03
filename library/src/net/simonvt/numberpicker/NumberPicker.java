@@ -1152,6 +1152,16 @@ public class NumberPicker extends LinearLayout {
     }
 
     /**
+     * Set the typeface for edit text and wheel texts.
+     *
+     * @param tf The typeface object.
+     */
+    public void setTypeface(Typeface tf) {
+        mInputText.setTypeface(tf);
+        mSelectorWheelPaint.setTypeface(tf);
+    }
+
+    /**
      * Set the current value for the number picker.
      * <p>
      * If the argument is less than the {@link NumberPicker#getMinValue()} and
