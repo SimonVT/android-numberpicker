@@ -16,6 +16,13 @@
 
 package net.simonvt.numberpicker;
 
+import java.text.DecimalFormatSymbols;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -55,12 +62,6 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.text.DecimalFormatSymbols;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-
 //import android.annotation.Widget;
 
 /**
@@ -92,6 +93,7 @@ import java.util.Locale;
  * </p>
  */
 //@Widget
+@SuppressLint("NewApi")
 public class NumberPicker extends LinearLayout {
 
     /**
@@ -619,6 +621,8 @@ public class NumberPicker extends LinearLayout {
         mVirtualButtonPressedDrawable = attributesArray.getDrawable(
                 R.styleable.NumberPicker_virtualButtonPressedDrawable);
 
+        int maxValue = attributesArray.getInt(R.styleable.NumberPicker_maxValue, 0);
+        int minValue = attributesArray.getInt(R.styleable.NumberPicker_minValue, 0);
         attributesArray.recycle();
 
         mPressedStateHelper = new PressedStateHelper();
@@ -727,6 +731,8 @@ public class NumberPicker extends LinearLayout {
                 setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_YES);
             }
         }
+        setMaxValue(maxValue);
+        setMinValue(minValue);
     }
 
     @Override

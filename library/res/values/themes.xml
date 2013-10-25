@@ -29,6 +29,10 @@
         <attr name="internalLayout" format="reference" />
         <!-- @hide The drawable for pressed virtual (increment/decrement) buttons. -->
         <attr name="virtualButtonPressedDrawable" format="reference"/>
+        <!-- The min value of the number picker. -->
+        <attr name="minValue" format="integer" />
+        <!-- The max value of the number picker. -->
+        <attr name="maxValue" format="integer" />
     </declare-styleable>
 
     <style name="NPWidget">
