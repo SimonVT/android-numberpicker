@@ -623,6 +623,7 @@ public class NumberPicker extends LinearLayout {
 
         int maxValue = attributesArray.getInt(R.styleable.NumberPicker_maxValue, 0);
         int minValue = attributesArray.getInt(R.styleable.NumberPicker_minValue, 0);
+        int defaultValue = attributesArray.getInt(R.styleable.NumberPicker_defaultValue, 0);
         attributesArray.recycle();
 
         mPressedStateHelper = new PressedStateHelper();
@@ -733,6 +734,7 @@ public class NumberPicker extends LinearLayout {
         }
         setMaxValue(maxValue);
         setMinValue(minValue);
+        setValue(defaultValue);
     }
 
     @Override

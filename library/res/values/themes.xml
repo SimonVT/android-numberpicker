@@ -33,6 +33,8 @@
         <attr name="minValue" format="integer" />
         <!-- The max value of the number picker. -->
         <attr name="maxValue" format="integer" />
+        <!-- The defalut value of the number picker. -->
+        <attr name="defaultValue" format="integer" />
     </declare-styleable>
 
     <style name="NPWidget">
