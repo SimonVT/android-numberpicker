@@ -1311,7 +1311,15 @@ public class NumberPicker extends LinearLayout {
     public int getValue() {
         return mValue;
     }
-
+    
+    /**
+     * Returns the displayed value of the Picker as String
+     * 
+     * */
+    public String getValueAsString()
+    {
+    	return (mDisplayedValues != null && mDisplayedValues.length > 0) ? mDisplayedValues[getValue()] : null;
+    }
     /**
      * Returns the min value of the picker.
      *
