@@ -1,0 +1,33 @@
+apply plugin: 'android-library'
+apply plugin: 'maven'
+
+android {
+	compileSdkVersion 19
+	buildToolsVersion '19.0.1'
+
+	sourceSets {
+		main {
+			manifest.srcFile 'AndroidManifest.xml'
+			java.srcDirs = ['src']
+			res.srcDirs = ['res']
+		}
+	}
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: "file://" + file('../maven-deploy'))
+		pom.version = '1.0.0'
+		pom.groupId = 'net.simonvt.numberpicker'
+		pom.artifactId = 'android-numberpicker'
+		pom.project {
+            licenses {
+				license {
+					name 'The Apache Software License, Version 2.0'
+					url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+					distribution 'release'
+				}
+			}
+		}
+    }
+}
