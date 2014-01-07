@@ -23,3 +23,11 @@ samples/*
 !samples/build.xml
 !samples/project.properties
 !samples/pom.xml
+
+# Gradle build #
+!*.gradle
+.gradle/
+!gradlew
+!gradlew.bat
+!gradle/
+
