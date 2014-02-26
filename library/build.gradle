@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.5.6'
+	classpath 'com.android.tools.build:gradle:0.8.+'
     }
 }
 
@@ -15,12 +15,12 @@ repositories {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:13.0.0'
+	compile 'com.android.support:support-v4:19.0.+'
 }
 
 android {
     compileSdkVersion 17
-    buildToolsVersion "17.0.0"
+    buildToolsVersion "19.0.2"
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 17
