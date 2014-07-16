@@ -1389,6 +1389,14 @@ public class NumberPicker extends LinearLayout {
     }
 
     /**
+     * Sets the font of the picker
+     */
+    public void setTypeface(Typeface typeface) {
+        mInputText.setTypeface(typeface);
+        mSelectorWheelPaint.setTypeface(typeface);
+    }
+    
+    /**
      * Gets the values to be displayed instead of string values.
      *
      * @return The displayed values.
