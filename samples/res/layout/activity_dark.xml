@@ -5,7 +5,10 @@
     android:orientation="horizontal"
     android:gravity="center">
 
+
+<!-- If your app is requires to use other theme (like AppCompat for ActionBarActivity), change style for this element as below -->
     <net.simonvt.numberpicker.NumberPicker
+        style="@style/NPWidget.Holo.NumberPicker"
         android:id="@+id/numberPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
