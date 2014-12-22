@@ -4,6 +4,9 @@
 !README.md
 !LICENSE
 !pom.xml
+!build.gradle
+!settings.gradle
+!gradlew
 
 !library/
 library/*
@@ -14,6 +17,8 @@ library/*
 !library/build.xml
 !library/project.properties
 !library/pom.xml
+!library/build.gradle
+!library/gradlew
 
 !samples/
 samples/*
@@ -23,3 +28,5 @@ samples/*
 !samples/build.xml
 !samples/project.properties
 !samples/pom.xml
+!samples.build.gradle
+!samples/gradlew

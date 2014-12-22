@@ -1,30 +1,18 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-	classpath 'com.android.tools.build:gradle:0.12.2'
-    }
-}
-
 apply plugin: 'com.android.library'
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-	compile 'com.android.support:support-v4:19.0.+'
-}
-
 android {
-    compileSdkVersion 19
-    buildToolsVersion "21.0.2"
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 19
     }
+
+
+    lintOptions {
+        abortOnError false
+    }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -36,4 +24,8 @@ android {
             assets.srcDirs = ['assets']
         }
     }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.0.+'
 }
