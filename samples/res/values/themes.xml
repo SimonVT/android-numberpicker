@@ -8,4 +8,9 @@
         <item name="numberPickerStyle">@style/NPWidget.Holo.Light.NumberPicker</item>
     </style>
 
+    <style name="SampleTheme.AppCompat" parent="Base.Theme.AppCompat.Light">
+        <item name="colorAccent">#9C27B0</item>
+        <item name="numberPickerStyle">@style/NPWidget.Material.NumberPicker</item>
+    </style>
+
 </resources>

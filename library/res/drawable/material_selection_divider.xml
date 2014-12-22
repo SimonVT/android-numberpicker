@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Simple rectangle shape colored as material accent color-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:thickness="1dp">
+
+    <solid android:color="?attr/colorAccent"/>
+
+</shape>
