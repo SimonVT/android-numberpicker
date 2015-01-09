@@ -12,7 +12,7 @@
         <!-- @hide Color for the solid color background if such for optimized rendering. -->
         <attr name="solidColor" format="color|reference" />
         <!-- @hide The divider for making the selection area. -->
-        <attr name="selectionDivider" format="reference" />
+        <attr name="selectionDivider" format=“color|reference" />
         <!-- @hide The height of the selection divider. -->
         <attr name="selectionDividerHeight" format="dimension" />
         <!-- @hide The distance between the two selection dividers. -->
@@ -53,6 +53,20 @@
 
     <style name="NPWidget.Holo.Light.NumberPicker" parent="NPWidget.Holo.NumberPicker">
         <item name="virtualButtonPressedDrawable">@drawable/item_background_holo_light</item>
+    </style>
+
+    <style name="NPWidget.Material.NumberPicker" parent="NPWidget.NumberPicker">
+        <item name="solidColor">@android:color/transparent</item>
+        <item name="selectionDivider”>?colorAccent</item>
+        <item name="selectionDividerHeight">2dip</item>
+        <item name="internalLayout">@layout/number_picker_with_selector_wheel</item>
+        <item name="internalMinWidth">64dip</item>
+        <item name="internalMaxHeight">180dip</item>
+        <item name="virtualButtonPressedDrawable">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="NPWidget.Material.Light.NumberPicker" parent="NPWidget.Material.NumberPicker">
+
     </style>
 
 </resources>

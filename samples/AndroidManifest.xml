@@ -24,5 +24,9 @@
         <activity
             android:name="net.simonvt.numberpicker.samples.LightThemeActivity"
             android:theme="@style/SampleTheme.Light" />
+
+        <activity android:name=".AppCompatThemeActivity"
+            android:theme="@style/SampleTheme.AppCompat"/>
+
     </application>
 </manifest>

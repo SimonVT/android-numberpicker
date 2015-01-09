@@ -28,5 +28,11 @@ public class SampleActivity extends Activity {
                 startActivity(new Intent(SampleActivity.this, LightThemeActivity.class));
             }
         });
+        findViewById(R.id.btnMaterial).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SampleActivity.this, AppCompatThemeActivity.class));
+            }
+        });
     }
 }

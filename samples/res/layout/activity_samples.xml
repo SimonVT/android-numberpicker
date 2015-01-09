@@ -16,5 +16,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Light themed" />
+
+    <Button
+        android:id="@+id/btnMaterial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Material theme"/>
 </LinearLayout>
 
